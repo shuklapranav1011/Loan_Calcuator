@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+
+    <title>Loan Calculator</title>
+</head>
+<body class="blue-grey darken-4">
+    
+    <div class="container">
+       <div class="row">
+           <div class="col s12">
+               <div class="card white black-text ">
+                    <div class="card-content">
+                        <h4 class="center-align heading">Loan Calculator</h4>
+                        <form action="" id="load-form">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <span class="prefix"><i class="fas fa-dollar-sign"></i></span>
+                                    <input id="amount" type="number" class="validate">
+                                    <label for="amount">Enter loan amount...</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <span class="prefix"><i class="fas fa-percentage"></i></span>
+                                    <input id="rate" type="number" class="validate">
+                                    <label for="rate">Enter interest rate (annual)...</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <span class="prefix"><i class="far fa-clock"></i></span>
+                                    <input id="year" type="number" class="validate">
+                                    <label for="year">Enter repayment years....</label>
+                                </div>
+                                <input type="submit" value="Calulate" class="col s12 btn blue-grey darken-4">
+                            </div>
+                        </form>
+                    
+                    <div id="loading" class = "center-align" style="margin:30px;">
+                        <img src="img/loading.gif" alt="">
+                    </div>
+          
+                    </div>
+                    <div class="card-action" id="results">
+                        <h5 class="center-align" style="margin-bottom:10px;">Results</h5>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <span class="prefix"><i class="fas fa-calendar-times"></i></span>
+                              <input disabled  id="month" type="number" class="validate">
+                              <!-- <label for="month">Monthly Payment</label> -->
+                            </div>
+
+                            <div class="input-field col s12">
+                                <span class="prefix"><i class="fas fa-coins"></i></span>
+                                <input disabled id="total_amount" type="number" class= "validate">
+                                <!-- <label for="total_amount">Total Amount</label> -->
+                            </div>
+
+                            <div class="input-field col s12">
+                                <span class="prefix"><i class="fas fa-money-bill-wave"></i></span>
+                                <input disabled id="total_interest" type="number" class = "validate">
+                                <!-- <label for="total_interest">Total Interest</label> -->
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+       </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
